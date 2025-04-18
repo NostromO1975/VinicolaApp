@@ -14,7 +14,56 @@
 
     <main class="container">
         <!-- Aquí irán las secciones -->
-        <section id="app-content">
+        <section class="form-section">
+            <h2>📝 Datos del Productor</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nombre-fabrica">Nombre/Fábrica:</label>
+                    <input type="text" id="nombre-fabrica" placeholder="Ej: Bodega Artesanal" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="producto">Producto a elaborar:</label>
+                    <select id="producto" required>
+                        <option value="">-- Seleccione --</option>
+                        <option value="vino">Vino de fruta</option>
+                        <option value="chicha">Chicha</option>
+                        <option value="masato">Masato</option>
+                        <option value="guarapo">Guarapo</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="numero-lote">Número de lote:</label>
+                    <input type="text" id="numero-lote" placeholder="Ej: L-2023-001" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="encargado">Encargado:</label>
+                    <input type="text" id="encargado" placeholder="Nombre del responsable">
+                </div>
+                
+                <div class="form-group">
+                    <label>Estado del lote:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="estado-lote" value="exitosa"> Exitosa</label>
+                        <label><input type="radio" name="estado-lote" value="deficiente"> Deficiente</label>
+                        <label><input type="radio" name="estado-lote" value="descartado"> Descartado</label>
+                    </div>
+                    
+                    <div id="calificacion-container" style="display: none;">
+                        <label for="calificacion">Calificación (1-10):</label>
+                        <input type="number" id="calificacion" min="1" max="10">
+                    </div>
+                </div>
+            </div>
+        </section>
             <p>¡Pronto tendremos nuestra aplicación aquí!</p>
         </section>
     </main>
