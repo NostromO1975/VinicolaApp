@@ -13,7 +13,7 @@
     </header>
 
     <main class="container">
-        <!-- Aquí irán las secciones -->
+        <!-- SECCIÓN 1: Datos del Productor -->
         <section class="form-section">
             <h2>📝 Datos del Productor</h2>
             <div class="form-grid">
@@ -37,6 +37,10 @@
                         <option value="guarapo">Guarapo</option>
                         <option value="otro">Otro</option>
                     </select>
+                    <div id="otro-producto-container" class="hidden">
+                        <label for="otro-producto">Especifique cuál:</label>
+                        <input type="text" id="otro-producto" placeholder="Ej: Hidromiel, Cerveza de fruta...">
+                    </div>
                 </div>
                 
                 <div class="form-group">
@@ -57,14 +61,52 @@
                         <label><input type="radio" name="estado-lote" value="descartado"> Descartado</label>
                     </div>
                     
-                    <div id="calificacion-container" style="display: none;">
+                    <div id="calificacion-container" class="hidden">
                         <label for="calificacion">Calificación (1-10):</label>
                         <input type="number" id="calificacion" min="1" max="10">
                     </div>
                 </div>
             </div>
         </section>
-            <p>¡Pronto tendremos nuestra aplicación aquí!</p>
+
+        <!-- SECCIÓN 2: Formulación -->
+        <section class="form-section">
+            <h2>🍓 Formulación</h2>
+            <div class="form-group">
+                <label for="sistema-unidades">Sistema de unidades:</label>
+                <select id="sistema-unidades">
+                    <option value="metrico">Métrico (kg, litros)</option>
+                    <option value="imperial">Imperial (lbs, galones)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="volumen">Volumen total deseado:</label>
+                <input type="number" id="volumen" min="1" step="0.1" value="1">
+                <span id="volumen-unidad">litros</span>
+            </div>
+
+            <h3>Frutas Principales</h3>
+            <div id="frutas-container" class="ingredients-grid">
+                <!-- Generado dinámicamente -->
+            </div>
+
+            <h3>Fuentes de Azúcar</h3>
+            <div id="azucares-container" class="ingredients-grid">
+                <!-- Generado dinámicamente -->
+            </div>
+
+            <div class="results-box">
+                <h3>📊 Resultados Teóricos</h3>
+                <div class="result-item">
+                    <span>Azúcares totales:</span>
+                    <span id="azucares-totales">0</span> g
+                </div>
+                <div class="result-item">
+                    <span>Alcohol potencial:</span>
+                    <span id="alcohol-potencial">0</span> % ABV
+                </div>
+            </div>
         </section>
     </main>
 

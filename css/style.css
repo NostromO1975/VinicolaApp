@@ -1,51 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f9f3f0;
-    color: #333;
-}
-
-header {
-    background-color: #8b0000; /* Rojo vino */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
-}
-
-h1 span {
-    font-size: 1.2em;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input, select {
-    padding: 8px;
-    width: 100%;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
 /* Estilos principales */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f5f0; /* Fondo crema claro */
+    background-color: #f9f5f0;
     color: #333;
 }
 
 .wine-header {
-    background: linear-gradient(to right, #8b0000, #a52a2a); /* Degradado rojo vino */
+    background: linear-gradient(to right, #8b0000, #a52a2a);
     color: white;
     padding: 2rem;
     text-align: center;
@@ -67,6 +30,7 @@ body {
     margin: 2rem auto;
     padding: 0 1rem;
 }
+
 /* Estilos para el formulario */
 .form-section {
     background: white;
@@ -87,6 +51,10 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+}
+
+.hidden {
+    display: none;
 }
 
 .radio-group {
@@ -116,4 +84,50 @@ input:focus, select:focus {
     outline: none;
     border-color: #8b0000;
     box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.1);
+}
+
+/* NUEVOS ESTILOS PARA FORMULACIÓN */
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.ingredient-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 6px;
+}
+
+.ingredient-row select, 
+.ingredient-row input {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.results-box {
+    background: #fff8f0;
+    border: 1px solid #ffe0c2;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.results-box h3 {
+    margin-top: 0;
+    color: #e67e22;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.result-item span:first-child {
+    font-weight: bold;
 }
