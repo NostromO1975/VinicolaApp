@@ -35,3 +35,35 @@ input, select {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+/* Estilos principales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f5f0; /* Fondo crema claro */
+    color: #333;
+}
+
+.wine-header {
+    background: linear-gradient(to right, #8b0000, #a52a2a); /* Degradado rojo vino */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.wine-emoji {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.tagline {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
