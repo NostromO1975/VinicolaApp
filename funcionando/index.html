@@ -10,9 +10,6 @@
     <header class="wine-header">
         <h1>VinicolaApp <span class="wine-emoji">🍷</span></h1>
         <p class="tagline">Formulador de vinos y fermentados</p>
-        <div class="header-contact">
-            <small>Gustavo Chivará | Ingeniero Químico</small>
-        </div>
     </header>
 
     <main class="container">
@@ -85,20 +82,18 @@
 
             <div class="form-group">
                 <label for="volumen">Volumen total deseado:</label>
-                <div class="input-with-unit">
-                    <input type="number" id="volumen" min="1" step="0.1" value="1">
-                    <span id="volumen-unidad">litros</span>
-                </div>
+                <input type="number" id="volumen" min="1" step="0.1" value="1">
+                <span id="volumen-unidad">litros</span>
             </div>
 
             <h3>Frutas Principales</h3>
             <div id="frutas-container" class="ingredients-grid">
-                <!-- Los selectores de frutas se generarán aquí -->
+                <!-- Generado dinámicamente -->
             </div>
 
             <h3>Fuentes de Azúcar</h3>
             <div id="azucares-container" class="ingredients-grid">
-                <!-- Los selectores de azúcares se generarán aquí -->
+                <!-- Generado dinámicamente -->
             </div>
 
             <div class="results-box">
@@ -110,10 +105,6 @@
                 <div class="result-item">
                     <span>Alcohol potencial:</span>
                     <span id="alcohol-potencial">0</span> % ABV
-                </div>
-                <div class="result-item">
-                    <span>Proporción agua/fruta recomendada:</span>
-                    <span id="ratio-agua">-</span>
                 </div>
             </div>
         </section>

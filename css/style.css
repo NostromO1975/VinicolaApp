@@ -1,18 +1,20 @@
-/* Estilos principales */
+/* ==================== ESTILOS PRINCIPALES ==================== */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f5f0;
     color: #333;
+    line-height: 1.6;
 }
 
+/* ==================== ENCABEZADO SIMPLE ==================== */
 .wine-header {
-    background: linear-gradient(to right, #8b0000, #a52a2a);
+    background: #8b0000; /* Rojo vino sólido */
     color: white;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
 }
 
 .wine-emoji {
@@ -23,40 +25,70 @@ body {
 .tagline {
     font-style: italic;
     opacity: 0.9;
+    margin-top: 0.5rem;
 }
 
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
 .container {
-    max-width: 800px;
-    margin: 2rem auto;
+    max-width: 900px;
+    margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* Estilos para el formulario */
+/* ==================== SECCIONES DE FORMULARIO ==================== */
 .form-section {
     background: white;
     border-radius: 8px;
     padding: 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .form-section h2 {
     color: #8b0000;
     margin-top: 0;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
     padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
 }
 
+/* ==================== FORMULARIO LIMPIO ==================== */
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
-.hidden {
-    display: none;
+.form-group {
+    margin-bottom: 1rem;
 }
 
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    color: #555;
+}
+
+/* ==================== CONTROLES BÁSICOS ==================== */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1em;
+    background: #fff;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #8b0000;
+}
+
+/* ==================== RADIO BUTTONS SIMPLES ==================== */
 .radio-group {
     display: flex;
     gap: 1rem;
@@ -70,34 +102,15 @@ body {
     font-weight: normal;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="number"],
-select {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-}
-
-input:focus, select:focus {
-    outline: none;
-    border-color: #8b0000;
-    box-shadow: 0 0 0 2px rgba(139, 0, 0, 0.1);
-}
-
-/* NUEVOS ESTILOS PARA FORMULACIÓN */
+/* ==================== INGREDIENTES (VERSIÓN PLANA) ==================== */
 .ingredients-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin: 1rem 0;
 }
 
 .ingredient-row {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
     padding: 1rem;
     background: #f8f8f8;
     border-radius: 6px;
@@ -105,21 +118,22 @@ input:focus, select:focus {
 
 .ingredient-row select, 
 .ingredient-row input {
+    margin-bottom: 0.5rem;
     width: 100%;
-    padding: 0.5rem;
 }
 
+/* ==================== RESULTADOS SIMPLES ==================== */
 .results-box {
     background: #fff8f0;
     border: 1px solid #ffe0c2;
     border-radius: 8px;
     padding: 1rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .results-box h3 {
     margin-top: 0;
-    color: #e67e22;
+    color: #8b0000;
 }
 
 .result-item {
@@ -130,4 +144,17 @@ input:focus, select:focus {
 
 .result-item span:first-child {
     font-weight: bold;
+}
+
+/* ==================== UTILIDADES ==================== */
+.hidden {
+    display: none;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .form-grid,
+    .ingredients-grid {
+        grid-template-columns: 1fr;
+    }
 }
